@@ -1,26 +1,36 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from 'vscode'
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	const disposable = vscode.commands.registerCommand('join-paste.join-paste', async () => {
+		const clipboard = await vscode.env.clipboard.readText()
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "join-paste" is now active!');
+		if (!clipboard) {
+			vscode.window.showInformationMessage('クリップボードが空です')
+			return
+		}
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('join-paste.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from join-paste!');
-	});
+		const separator = await vscode.window.showInputBox({
+			prompt: 'この文字列で繋げる',
+		})
 
-	context.subscriptions.push(disposable);
+		if (separator === undefined) {
+			return
+		}
+
+		const lines = clipboard.split('\n')
+		const joinedText = lines.join(separator)
+
+		const editor = vscode.window.activeTextEditor
+		if (editor) {
+			editor.edit((editBuilder) => {
+				editor.selections.forEach((selection) => {
+					editBuilder.replace(selection, joinedText)
+				})
+			})
+		}
+	})
+
+	context.subscriptions.push(disposable)
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
