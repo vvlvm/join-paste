@@ -1,71 +1,28 @@
-# join-paste README
+# Join Paste
 
-This is the README for your extension "join-paste". After writing up a brief description, we recommend including the following sections.
+Join Paste は、VSCode の拡張機能で、クリップボードの内容をカスタムセパレータで結合して複数のカーソル位置に貼り付けることができます。
 
-## Features
+## 特徴
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- クリップボードの内容を取得
+- 任意のセパレータでクリップボードの内容を結合
+- 複数のカーソル位置に一括で貼り付け
 
-For example if there is an image subfolder under your extension project workspace:
+## インストール
 
-\!\[feature X\]\(images/feature-x.png\)
+1. VSCode を開きます。
+2. 拡張機能タブ（サイドバーのアイコン）をクリックします。
+3. 検索バーに「Join Paste」と入力し、Enter キーを押します。
+4. リストから Join Paste を選び、「インストール」ボタンをクリックします。
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 使用方法
 
-## Requirements
+1. 任意のテキストをクリップボードにコピーします。
+2. VSCode のコマンドパレットを開きます（`Ctrl+Shift+P` または `Cmd+Shift+P`）。
+3. 「JoinPaste」を検索して選択します。
+4. セパレータを入力するプロンプトが表示されます。任意のセパレータを入力します。
+5. クリップボードの内容が指定したセパレータで結合され、カーソルの位置に貼り付けられます。
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## コマンド
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- `JoinPaste`: クリップボードの内容をカスタムセパレータで結合して貼り付ける
