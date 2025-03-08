@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 			return
 		}
 
-		const lines = clipboard.split('\n')
+		const lines = clipboard.split(/[\n\r]+/g)
 		const joinedText = lines.join(separator)
 
 		const editor = vscode.window.activeTextEditor
