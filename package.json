@@ -2,9 +2,9 @@
 	"name": "join-paste",
 	"displayName": "Join Paste",
 	"description": "",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
-		"vscode": "^1.97.0"
+		"vscode": "^1.109.0"
 	},
 	"publisher": "vvlvm",
 	"categories": [
@@ -36,14 +36,13 @@
 		"test": "vscode-test"
 	},
 	"devDependencies": {
+		"@types/vscode": "^1.109.0",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "~20.19.33",
-		"@types/vscode": "1.97.0",
-		"@typescript-eslint/eslint-plugin": "^8.54.0",
-		"@typescript-eslint/parser": "^8.54.0",
-		"@vscode/test-cli": "^0.0.10",
-		"@vscode/test-electron": "^2.5.2",
+		"@types/node": "22.x",
+		"typescript-eslint": "^8.54.0",
 		"eslint": "^9.39.2",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"@vscode/test-cli": "^0.0.12",
+		"@vscode/test-electron": "^2.5.2"
 	}
 }
