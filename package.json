@@ -2,9 +2,9 @@
 	"name": "join-paste",
 	"displayName": "Join Paste",
 	"description": "",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"engines": {
-		"vscode": "^1.109.0"
+		"vscode": "^1.125.0"
 	},
 	"publisher": "vvlvm",
 	"categories": [
