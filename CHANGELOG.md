@@ -6,4 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+- No changes yet.
+
+## [0.0.7] - 2026-08-07
+
+### Changed
+
+- 開発用依存パッケージを更新
