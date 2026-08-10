@@ -3,7 +3,7 @@ import * as vscode from 'vscode'
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.commands.registerCommand(
 		'join-paste.join-paste',
-		async () => {
+		async (separator?: string) => {
 			const clipboard = await vscode.env.clipboard.readText()
 
 			if (!clipboard) {
@@ -11,12 +11,14 @@ export function activate(context: vscode.ExtensionContext) {
 				return
 			}
 
-			const separator = await vscode.window.showInputBox({
-				prompt: 'この文字列で繋げる',
-			})
-
 			if (separator === undefined) {
-				return
+				separator = await vscode.window.showInputBox({
+					prompt: "この文字列で繋げる",
+				})
+
+				if (separator === undefined) {
+					return
+				}
 			}
 
 			const lines = clipboard.split(/[\n\r]+/g)
