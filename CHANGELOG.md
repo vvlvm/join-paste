@@ -6,10 +6,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- No changes yet.
+- 変更はまだありません。
 
 ## [0.0.7] - 2026-08-07
 
 ### Changed
 
-- 開発用依存パッケージを更新
+- 開発依存パッケージを更新
+
+## [0.0.8] - 2026-08-11
+
+### Changed
+
+- コマンドの引数として区切り文字を指定できるようにした
